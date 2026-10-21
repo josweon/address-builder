@@ -17,6 +17,9 @@ public class BuildAddress {
         address.append(getAddressSection("Billing State: ", scanner));
         address.append(getAddressSection("Billing Zip: ", scanner));
         address.append(getAddressSection("Shipping Street: ", scanner));
+        address.append(getAddressSection("Shipping City: ", scanner));
+        address.append(getAddressSection("Shipping State: ", scanner));
+        address.append(getAddressSection("Shipping Zip: ", scanner));
 
         System.out.println(address);
     }
