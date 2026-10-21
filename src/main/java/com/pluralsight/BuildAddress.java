@@ -22,27 +22,23 @@ public class BuildAddress {
         StringBuilder shippingAddress = new StringBuilder();
 
         System.out.println("Please provide the following information:");
-        billingAddress.append(getAddressSection("Full name: ", scanner));
 
-        billingAddress.append("\nBilling Address:\n");
-        billingAddress.append(getAddressSection("Billing Street: ", scanner));
-        billingAddress.append("\n");
-        billingAddress.append(getAddressSection("Billing City: ", scanner));
-        billingAddress.append(getAddressSection("Billing State: ", scanner));
-        billingAddress.append(getAddressSection("Billing Zip: ", scanner));
+        String fullName = getAddressSection("Full name: ", scanner);
+        String billingStreet = getAddressSection("Billing Street: ", scanner);
+        String billingCity = getAddressSection("Billing City: ", scanner);
+        String billingState = getAddressSection("Billing State: ", scanner);
+        String billingZip = getAddressSection("Billing Zip: ", scanner);
 
-        shippingAddress.append(getAddressSection("Shipping Street: ", scanner));
-        shippingAddress.append(getAddressSection("Shipping City: ", scanner));
-        shippingAddress.append(getAddressSection("Shipping State: ", scanner));
-        shippingAddress.append(getAddressSection("Shipping Zip: ", scanner));
+        String shippingStreet = getAddressSection("Shipping Street: ", scanner);
+        String shippingCity = getAddressSection("Shipping City: ", scanner);
+        String shippingState = getAddressSection("Shipping State: ", scanner);
+        String shippingZip = getAddressSection("Shipping Zip: ", scanner);
 
-        System.out.println(billingAddress);
-        System.out.println(shippingAddress);
     }
 
     public static String getAddressSection(String prompt, Scanner scanner){
         System.out.print(prompt);
         String input = scanner.nextLine();
-        return input.trim() + " ";
+        return input.trim();
     }
 }
