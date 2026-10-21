@@ -34,6 +34,21 @@ public class BuildAddress {
         String shippingState = getAddressSection("Shipping State: ", scanner);
         String shippingZip = getAddressSection("Shipping Zip: ", scanner);
 
+//        * Billing Address:
+//        * 123 Main Street
+//        * Middleton, TX 75111
+        billingAddress.append("Billing Address:\n");
+        billingAddress.append(billingStreet);
+        billingAddress.append("\n");
+        billingAddress.append(billingCity);
+        billingAddress.append(", ");
+        billingAddress.append(billingState);
+        billingAddress.append(" ");
+        billingAddress.append(billingZip);
+
+        String formatBillingAddress = billingAddress.toString();
+
+        System.out.println(formatBillingAddress);
     }
 
     public static String getAddressSection(String prompt, Scanner scanner){
